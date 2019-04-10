@@ -1,4 +1,10 @@
 package com.furao.edas;
 
-public class ProductService {
+/**
+ * 定义api的内容及能力
+ */
+public interface ProductService {
+
+    public Product printTodayWeather();
+
 }
