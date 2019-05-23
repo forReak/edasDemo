@@ -4,9 +4,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.taobao.com/hsf http://www.taobao.com/hsf/hsf.xsd">
     
     <!--声明查询天气实例的实现-->
-    <bean id="myWeatherService" class="com.furao.edas.provider.ServiceImpl"/>
+    <!--<bean id="myWeatherService" class="com.furao.edas.provider.ServiceImpl"/>
     
     <hsf:provider id="myWeatherProvider" interface="com.furao.edas.ProductService" ref="myWeatherService"
-     version="1.0.0" group="demoGroup"/>
-    
+     version="1.0.0" group="demoGroup"/>-->
+
+    <bean id="sysSup" class="sunbox.gateway.api.service.system.SysSupportApiServiceImpl"/>
+
+
+    <hsf:provider id="sysSupportApiService"
+                  interface="sunbox.gateway.api.service.system.SysSupportApiService"
+                  ref="sysSup"
+                  version="1.1.1"
+                  group="ddqc"
+                  clientTimeout="500000">
+    </hsf:provider>
 </beans>

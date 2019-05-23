@@ -16,7 +16,7 @@ import javax.servlet.ServletContextEvent;
 public class GetWeatherController {
 
     //resource 注解会从上下文中获取唯一bean
-    @Resource
+   /* @Resource
     ProductService productService;
 
     @RequestMapping("/")
@@ -25,5 +25,5 @@ public class GetWeatherController {
         Product product = productService.printTodayWeather();
         model.addAttribute("result",product);
         return "index";
-    }
+    }*/
 }
